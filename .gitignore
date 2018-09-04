@@ -1,1 +1,5 @@
+# Dependencies
 bower_components/
+
+# Build component
+build/

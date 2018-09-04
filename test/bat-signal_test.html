@@ -13,36 +13,34 @@
   </head>
   <body>
 
-    <test-fixture id="BasicTestFixture">
+    <test-fixture id="initiallyOff">
       <template>
         <bat-signal></bat-signal>
       </template>
     </test-fixture>
 
-    <test-fixture id="ChangedPropertyTestFixture">
+    <test-fixture id="toggleClass">
       <template>
-        <bat-signal prop1="new-prop1"></bat-signal>
+        <bat-signal></bat-signal>
       </template>
     </test-fixture>
 
     <script>
       suite('bat-signal', () => {
 
-        test('instantiating the element with default properties works', () => {
-          const element = fixture('BasicTestFixture');
-          assert.equal(element.prop1, 'bat-signal');
+        test('bat-signal is initially off', () => {
+          const element = fixture('initiallyOff');
           const elementShadowRoot = element.shadowRoot;
-          const elementHeader = elementShadowRoot.querySelector('h2');
-          assert.equal(elementHeader.innerHTML, 'Hello bat-signal!');
+          const lamp = elementShadowRoot.querySelector('#lamp');
+          assert.equal(lamp.classList.contains('on'), false);
         });
 
-        test('setting a property on the element works', () => {
-          // Create a test fixture
-          const element = fixture('ChangedPropertyTestFixture');
-          assert.equal(element.prop1, 'new-prop1');
+        test('clicking the lamp sets class on', () => {
+          const element = fixture('toggleClass');
           const elementShadowRoot = element.shadowRoot;
-          const elementHeader = elementShadowRoot.querySelector('h2');
-          assert.equal(elementHeader.innerHTML, 'Hello new-prop1!');
+          const lamp = elementShadowRoot.querySelector('#lamp');
+          lamp.click();
+          assert.equal(lamp.classList.contains('on'), true);
         });
 
       });
