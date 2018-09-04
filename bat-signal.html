@@ -35,15 +35,20 @@
 
   <script>
     /**
-     * `bat-signal`
-     * Bat-signal element
+     * # `bat-signal`
+     * Bat-signal element, for the dark and long night.
      *
      * @customElement
      * @polymer
-     * @demo demo/index.html
+     * @demo index.html
      */
     class BatSignal extends Polymer.Element {
+
       static get is() { return 'bat-signal'; }
+      
+      /**
+       * Toggles the bat-signal.
+       */
       toggleLight() {
         this.shadowRoot.querySelector('#lamp').classList.toggle('on');
       }
