@@ -1,0 +1,36 @@
+<link rel="import" href="../polymer/polymer-element.html">
+
+<dom-module id="bat-signal">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    <h2>Hello [[prop1]]!</h2>
+  </template>
+
+  <script>
+    /**
+     * `bat-signal`
+     * Bat-signal element
+     *
+     * @customElement
+     * @polymer
+     * @demo demo/index.html
+     */
+    class BatSignal extends Polymer.Element {
+      static get is() { return 'bat-signal'; }
+      static get properties() {
+        return {
+          prop1: {
+            type: String,
+            value: 'bat-signal'
+          }
+        };
+      }
+    }
+
+    window.customElements.define(BatSignal.is, BatSignal);
+  </script>
+</dom-module>
