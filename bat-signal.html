@@ -17,6 +17,7 @@
         background-color: white;
         border-radius: 50%;
         border: var(--bat-signal-border, 5px) outset black;
+        transition: background-color 0.2s;
       }
       #lamp.on {
         background-color: yellow;
@@ -37,6 +38,14 @@
     /**
      * # `bat-signal`
      * Bat-signal element, for the dark and long night.
+     *
+     * ### Styling
+     *`<bat-signal>` provides the following custom properties for styling:
+     *
+     * Custom property | Description | Default
+     * ----------------|-------------|----------
+     * `--bat-signal-size` | Element's size | 200px
+     * `--bat-signal-border` | Spotlight border size | 5px
      *
      * @customElement
      * @polymer

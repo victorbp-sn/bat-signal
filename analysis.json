@@ -2,7 +2,7 @@
   "schema_version": "1.0.0",
   "elements": [
     {
-      "description": "# `bat-signal`\nBat-signal element, for the dark and long night.",
+      "description": "# `bat-signal`\nBat-signal element, for the dark and long night.\n\n### Styling\n`<bat-signal>` provides the following custom properties for styling:\n\nCustom property | Description | Default\n----------------|-------------|----------\n`--bat-signal-size` | Element's size | 200px\n`--bat-signal-border` | Spotlight border size | 5px",
       "summary": "",
       "path": "bat-signal.html",
       "properties": [
@@ -2789,11 +2789,11 @@
           "privacy": "public",
           "sourceRange": {
             "start": {
-              "line": 51,
+              "line": 60,
               "column": 6
             },
             "end": {
-              "line": 53,
+              "line": 62,
               "column": 7
             }
           },
@@ -3748,11 +3748,11 @@
       "metadata": {},
       "sourceRange": {
         "start": {
-          "line": 44,
+          "line": 53,
           "column": 4
         },
         "end": {
-          "line": 54,
+          "line": 63,
           "column": 5
         }
       },
